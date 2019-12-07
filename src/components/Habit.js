@@ -1,11 +1,11 @@
 import React from 'react'
+import './Habit.scss'
 
 const Habit = ({habit}) => {
     return (
-        <>
-            <h3>Bad Habit: {habit.title}</h3>
-            <small>Active: {String(habit.active)}</small>
-        </>
+        <div className="habit">
+            <h2>{habit.title}</h2>
+        </div>
     )
 }
 

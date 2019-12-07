@@ -24,7 +24,8 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App">
+      <div className="app">
+          <h1>Smash These Bad Habits</h1>
           {this.renderHabits()}
       </div>
     );

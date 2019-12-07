@@ -1,0 +1,19 @@
+.habit {
+    border: 1px solid rgba(11,11,11,0.1);
+    border-radius: 15px;
+    width: 50vw;
+    min-width: 400px;
+    margin:auto;
+    margin-top: 10px;
+    font-family: 'Patrick Hand SC', cursive;
+    
+    h2 {
+        color: red;
+    }
+}
+
+.habit:hover {
+    background-color:rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+}
+
