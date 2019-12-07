@@ -6,6 +6,7 @@
 
 - `Javascript`
 - `React.js`
+- `SCSS`
 
 ## Deployment 
 
@@ -13,4 +14,4 @@
 
 ## Endpoint
 
-- `https://habit-smasher.herokuapp.com/`
+- `https://habit-smasher-93a50.firebaseapp.com`
