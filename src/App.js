@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Habit from './components/Habit'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  
+  state = {
+    habits: []
+  }
+  
+  componentDidMount(){
+    fetch(`https://habit-smasher.herokuapp.com/habits`)
+      .then(r => r.json())
+      .then(r => this.setState({
+        habits: r
+      }))
+  }
+
+  renderHabits = () => {
+    return this.state.habits.map(habit => {
+        return <Habit habit={habit} />
+    })
+}
+
+  render(){
+    return (
+      <div className="App">
+          {this.renderHabits()}
+      </div>
+    );
+  }
 }
 
 export default App;
